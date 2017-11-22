@@ -16,11 +16,11 @@
 </p>
 
 <p>
-  <strong>Owner Id and Pet:</strong>
+  <strong>Pets:</strong>
   <% @pets.each do |pet| %><br>
-    <%= pet.owner_id %>
-    <%= pet.animal %>
-    <%= pet.age %><br>
+    <p>ID: <%= pet.owner_id %></p>
+    <p>Animal: <%= pet.animal %></p>
+    <p>Age: <%= pet.age %><br></p>
   <% end %>
 </p>
 
