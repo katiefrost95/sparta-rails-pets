@@ -15,6 +15,7 @@ class PetsController < ApplicationController
   # GET /pets/new
   def new
     @pet = Pet.new
+    @owners = Owner.all
   end
 
   # GET /pets/1/edit
@@ -28,7 +29,7 @@ class PetsController < ApplicationController
 
     respond_to do |format|
       if @pet.save
-        format.html { redirect_to @pet, notice: 'Pet was successfully created.' }
+        format.html { redirect_to @pet, notice: 'Pet was successfully added.' }
         format.json { render :show, status: :created, location: @pet }
       else
         format.html { render :new }
