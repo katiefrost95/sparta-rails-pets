@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @owner.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @owner.last_name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @owner.gender %>
+</p>
+
+<p>
+  <strong>Pets:</strong>
+  <% @pets.each do |pet| %><br>
+    <p>ID: <%= pet.owner_id %></p>
+    <p>Animal: <%= pet.animal %></p>
+    <p>Age: <%= pet.age %><br></p>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_owner_path(@owner) %> |
+<%= link_to 'Back', owners_path %>
